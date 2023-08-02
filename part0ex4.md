@@ -22,4 +22,11 @@ sequenceDiagram
     activate server
     server->>client: main.js file
     deactivate server
+    client->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server->>client: data.json is retrieved
+    deactivate server
+    activate client
+    note right of client: browser render the page again using the updated json file
+    deactivate client
 ```
